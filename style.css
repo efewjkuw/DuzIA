@@ -394,54 +394,136 @@ body.dark-theme .setting-item select { border-color: rgba(255, 255, 255, 0.2); b
     background: rgba(0, 0, 0, 0.3);
     color: white;
 }
+
 /* ================================================== */
-/* 6. AJUSTES PARA TELAS PEQUENAS (RESPONSIVIDADE)    */
+/* 6. DESIGN RESPONSIVO - AJUSTES PARA TELAS MENORES  */
 /* ================================================== */
-@media (max-width: 600px) {
-    
+
+/* Ajustes Gerais para Telas Menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
     .chat-page {
         width: 100%;
-        height: 100vh;
-        max-height: none;
-        border-radius: 0;
-        padding: 15px;
+        height: 100vh; /* Ocupa a altura total da tela */
+        max-height: none; /* Remove a altura máxima fixa */
+        border-radius: 0; /* Remove bordas arredondadas em tela cheia */
+        padding: 10px; /* Reduz o espaçamento interno */
+        box-shadow: none; /* Remove a sombra quando em tela cheia */
     }
 
     .main-title-container {
-        top: 20px;
-        left: 20px;
+        top: 15px;
+        left: 15px;
+        transform: none; /* Remove a centralização automática */
     }
 
     .main-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Diminui o tamanho do título */
     }
 
     .main-icon-img {
-        width: 40px;
+        width: 35px; /* Diminui o ícone principal */
     }
 
-    /* AQUI ESTÁ A CORREÇÃO IMPORTANTE */
+    .user-profile-icon {
+        top: 15px;
+        right: 15px;
+        width: 38px; /* Ajusta o tamanho do ícone de perfil */
+        height: 38px;
+        font-size: 1.2rem;
+    }
+
     .chat-messages {
-        margin: 10px 0; /* Reduz a margem que estava empurrando a barra para fora */
-    }
-
-    .chat-input-area {
-        padding: 8px;
-        gap: 8px;
-    }
-
-    .action-btn {
-        width: 42px;
-        height: 42px;
-        font-size: 18px;
-    }
-
-    .chat-input-area input[type="text"] {
-        padding: 10px 15px;
-        font-size: 1rem;
+        /* Ajusta o espaçamento para que a área de input não empurre o chat */
+        margin-top: 70px; /* Espaço para o título e ícones no topo */
+        margin-bottom: 70px; /* Espaço para a barra de input na base */
+        padding: 10px 5px; /* Ajusta o padding interno das mensagens */
     }
 
     .message {
-        max-width: 85%;
+        max-width: 90%; /* Permite que as mensagens ocupem mais largura */
+        padding: 8px 12px; /* Ajusta o padding das bolhas de mensagem */
+        font-size: 0.95rem; /* Leve redução na fonte da mensagem */
+    }
+
+    .chat-input-area {
+        position: fixed; /* Fixa a barra de input na parte inferior */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 15px; /* Ajusta o padding */
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05); /* Sombra para destacar a barra */
+        background-color: #fff; /* Fundo branco para a barra */
+        border-top: 1px solid #eee; /* Linha sutil no topo */
+        box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
+        gap: 5px; /* Reduz o espaçamento entre os elementos da barra */
+    }
+
+    .chat-input-area input[type="text"] {
+        flex-grow: 1; /* Permite que o input preencha o espaço disponível */
+        padding: 10px; /* Ajusta o padding do campo de texto */
+        font-size: 0.9rem; /* Diminui a fonte do input */
+    }
+
+    .action-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    /* Ajustes para a página de perfil em telas menores */
+    .profile-page-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    .profile-page-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .profile-form .input-group label {
+        font-size: 0.9rem;
+    }
+
+    .profile-form .input-group input,
+    .profile-form .input-group textarea {
+        font-size: 0.95rem;
+        padding: 8px 10px;
+    }
+
+    .profile-form button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Ajustes ainda menores para celulares muito pequenos (opcional, pode ser redundante) */
+@media (max-width: 400px) {
+    .chat-page {
+        padding: 8px;
+    }
+    .main-title-container {
+        top: 10px;
+        left: 10px;
+    }
+    .user-profile-icon {
+        top: 10px;
+        right: 10px;
+    }
+    .main-title {
+        font-size: 1.4rem;
+    }
+    .main-icon-img {
+        width: 30px;
+    }
+    .chat-input-area {
+        padding: 8px 10px;
+    }
+    .action-btn {
+        width: 35px;
+        height: 35px;
     }
 }
