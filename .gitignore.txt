@@ -1,0 +1,5 @@
+# Ignorar a pasta de dependências do Node.js
+node_modules
+
+# Ignorar o arquivo de variáveis de ambiente (contém a API Key)
+.env

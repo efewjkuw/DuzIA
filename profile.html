@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie seu Perfil - DuzAi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="profile-page-container">
+        <div class="glass-container profile-page">
+            <div class="profile-header">
+                <img src="Logo.png" alt="Logo DuzAi" class="profile-logo">
+                <h2>Bem-vindo(a) ao DuzAi</h2>
+                <p>Crie seu perfil para começar a conversar.</p>
+            </div>
+            
+            <form id="profile-form" class="profile-form">
+                <div class="form-group">
+                    <label for="username">Seu apelido</label>
+                    <input type="text" id="username" placeholder="Como devemos te chamar?" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Data de Nascimento</label>
+                    <input type="date" id="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Sua bio</label>
+                    <textarea id="bio" rows="3" placeholder="Fale um pouco sobre você..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="interests">Interesses</label>
+                    <input type="text" id="interests" placeholder="Ex: games, música, tecnologia">
+                </div>
+                <button type="submit" class="submit-btn">
+                    Entrar no Chat <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
