@@ -394,7 +394,6 @@ body.dark-theme .setting-item select { border-color: rgba(255, 255, 255, 0.2); b
     background: rgba(0, 0, 0, 0.3);
     color: white;
 }
-
 /* ================================================== */
 /* 6. AJUSTES PARA TELAS PEQUENAS (RESPONSIVIDADE)    */
 /* ================================================== */
@@ -419,6 +418,11 @@ body.dark-theme .setting-item select { border-color: rgba(255, 255, 255, 0.2); b
 
     .main-icon-img {
         width: 40px;
+    }
+
+    /* AQUI ESTÁ A CORREÇÃO IMPORTANTE */
+    .chat-messages {
+        margin: 10px 0; /* Reduz a margem que estava empurrando a barra para fora */
     }
 
     .chat-input-area {
